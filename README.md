@@ -10,3 +10,5 @@ Your current working directory is mounted into the container writeable at `/home
 You can additionally mount read-only reference data with the argument `--ref=PATH:NAME` to mount PATH at `/home/codejail/ref/NAME` read-only, i.e. `--ref=../example/knowledge:docs` will resolve `../example/knowledge` to its absolute path and mount that path read-only at `/home/codejail/ref/docs` inside the container.
 
 In its current form, no networking is exposed by default. When logging into Codex you must use the device-code flow to do so. In the future I will explore allowing conditional networking access that can be enabled/disabled mid container execution.
+
+Some other niceties, this container sets up starship with a nerd-font for a nicer looking bash experience while in the container outside of codex as I plan for this to be a launch point for other jailed tools, not just codex.
