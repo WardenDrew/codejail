@@ -1,6 +1,8 @@
 # Code Jail
 This is a dockerized OpenAI Codex container I whipped together to allow for sandboxing Codex in a deterministic way, enforcing boundaries and lack of access outside of intended scope.
 
+![alt text](https://github.com/WardenDrew/codejail/blob/main/screenshot.png?raw=true)
+
 `codejail.sh` serves as the main entrypoint and I recommend linking it to your local path i.e: `~/.local/bin/codejail` for ease of use. For the time being the contents of this repo need to live at `~/codejail/` to work since I haven't had to generalize that to a proper install script with only using it on my machines.
 
 `codejail` when run on its own builds and runs an ephemeral docker container with a baseline set of tools, inincluding OpenAI's Codex CLI. The container runs rootless as the `codejail` user inside the container, which is set to the same UID and GID as your host user.
